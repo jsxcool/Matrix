@@ -13,8 +13,8 @@ public:
             m[j] = i;
     }
     
-    friend double& operator ()(int i, int j);
-    Matrix operator=(Matrix left, Matrix right);
+    friend double& operator () (int i, int j);
+    Matrix operator = (Matrix right);
     double operator ()(int i, int j) const;
     friend Matrix operator *(Matrix left, Matrix right);
     friend std::ostream& operator << (std::ostream& s, Matrix& m);
