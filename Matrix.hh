@@ -13,7 +13,7 @@ public:
             m[j] = i;
     }
     
-    friend double& operator () (int i, int j);
+    double& operator () (int i, int j) const;
     Matrix operator = (Matrix right);
     double operator ()(int i, int j) const;
     friend Matrix operator *(Matrix left, Matrix right);
