@@ -2,9 +2,7 @@
 #include "Matrix.hh"
 using namespace std;
 
-Matrix::Matrix(int rows, int cols, double i);
-
-Matrix::Matrix operator +(Matrix left, Matrix right) {
+Matrix::Matrix operator +(const Matrix& left, const Matrix& right) {
         int i = left.rows;
         int j = left.cols;
         int x = right.rows;
@@ -17,4 +15,4 @@ Matrix::Matrix operator +(Matrix left, Matrix right) {
                 }
             }
         }
-    }
+}
