@@ -10,10 +10,10 @@ using namespace std;
 
 friend Matrix operator*(Matrix a, Matrix b) {
     Matrix c(a.rows, b.cols);
-    for (int i = 0; i < a.rows; i++) {
-        for (int j = 0; j < b.cols; j++) {
+    for (int i = 0; i < c.rows; i++) {
+        for (int j = 0; j < c.rows; j++) {
             for (int k = 0; k < a.cols; k++) {
-                c.m[i * c.cols + j] += a.m[i * c.cols + k] * b.m[k * c.cols + j];
+                c.m[i * a.rows + j] += a.m[i * a.cols + k] * b.m[k * b.cols + j];
             }
         }
     }
